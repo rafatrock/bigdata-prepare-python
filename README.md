@@ -1,23 +1,31 @@
-# Ready to Process BigData?
+# Ready to Process Big Data?
 
-Learn how to handle large amount of BigData for Machine Learning using Python
+Learn how to handle large amount of Big Data for Machine Learning using Python
 
 ## Getting Started
 
 ![Quote on BigData by Dan Ariely](https://scontent.fmaa1-4.fna.fbcdn.net/v/t1.0-9/29025597_10156279834452053_6491808424697790464_o.png?_nc_cat=102&_nc_ht=scontent.fmaa1-4.fna&oh=45bac59d9687755dae0cd03d4139ed9d&oe=5D43E986)
 
-This is a step by step guide with necessary codes and configurations for Data Scientists, Data Engineers, Data Analysts, Machine Learning Engineers as well as Business Analysts who are planning to mess with large amount of BigData for Machine Learning, Deep Learning, Classifications, Predictions or applying Artificial Intelligence by using Python and other possible FREE resources.
+This is a step by step guide with necessary codes and configurations for Data Scientists, Data Engineers, Data Analysts, Machine Learning Engineers as well as Business Analysts who are planning to mess with large amount of Big Data for Machine Learning, Deep Learning, Classifications, Predictions or applying Artificial Intelligence by using Python and other possible FREE resources.
 
 ### Prerequisites
 
-Before anyone starts the war with BigData I beleive these resources and tools are required to be installed and configured properly
+Generally in our local system we can deal with small amount of data for machine learning. It is efficient and good for small to medium scale of data volume. You can use your local system for even Kaggle like contests. But to deal with enormous amount of data we need a robust strategy. 
+
+```PowerShell
+systeminfo | findstr /C:"Total Physical Memory"
+systeminfo | findstr /C:"Processor(s)"
+```
+
+Even you can't load the data on Microsoft Excel (at most `1,048,576 rows`) or any editor 
+
+Before anyone starts the war with Big Data I beleive these platform(s) and tool(s) are required to be installed and configured properly
 
 ```
 Python >= 3.x
 Apache Spark >= 2.x
 CSVKit >= 1.X
-Google Drive (15 GB) or Mega Cloud (50 GB) Account
-Google Collaboratory
+A Cloud Infrastructure (e.g. Google Cloud Platform)
 ```
 
 ### Installing
