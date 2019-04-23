@@ -4,9 +4,9 @@ Learn how to handle large amount of BigData for Machine Learning using Python
 
 ## Getting Started
 
+![Quote on BigData by Dan Ariely](https://scontent.fmaa1-4.fna.fbcdn.net/v/t1.0-9/29025597_10156279834452053_6491808424697790464_o.png?_nc_cat=102&_nc_ht=scontent.fmaa1-4.fna&oh=45bac59d9687755dae0cd03d4139ed9d&oe=5D43E986)
+
 This is a step by step guide with necessary codes and configurations for Data Scientists, Data Engineers, Data Analysts, Machine Learning Engineers as well as Business Analysts who are planning to mess with large amount of BigData for Machine Learning, Deep Learning, Classifications, Predictions or applying Artificial Intelligence by using Python and other possible FREE resources.
-> Big Data is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyone claims they are doing it.
-> - Dan Ariely
 
 ### Prerequisites
 
@@ -22,12 +22,31 @@ Google Collaboratory
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+I am sharing my thoughts on a step by step series of examples that tell you how to get a development env ready
+
+- [x] Using Google Colaboratory
+- [ ] Install Apache Spark with Hadoop
+- [ ] Install CSVKit for handling CSV files
+- [ ] Connect with a Cloud Data Repository to access Datasets
 
 Say what the step will be
 
 ```
 Give the example
+```
+
+```Shell
+#OpenJDK Dependencies for Spark
+apt-get install openjdk-8-jdk-headless -qq > /dev/null 
+
+#Download Apache Spark
+wget -q http://apache.osuosl.org/spark/spark-2.3.3/spark-2.3.3-bin-hadoop2.7.tgz 
+
+#Apache Spark and Hadoop Unzip
+tar xf spark-2.3.3-bin-hadoop2.7.tgz 
+
+#FindSpark Install
+pip install -q findspark 
 ```
 
 And repeat
