@@ -41,6 +41,8 @@ The first step is to use a Cloud Infrastructure to compute and transform your da
 
 ![Google Colaboratory](https://cdn-images-1.medium.com/max/1600/1*9tQN6y8rc3Qwr7V70F1F5g.png)
 
+---
+
 - [x] Using Google Colaboratory
 - [x] Install Apache Spark with Hadoop
 - [x] Install CSVKit for handling CSV files
@@ -55,6 +57,8 @@ $ tar xf spark-2.3.3-bin-hadoop2.7.tgz
 $ pip install -q findspark 
 $ pip install -q csvkit
 ```
+
+---
 
 - [x] Using Google Colaboratory
 - [x] Install Apache Spark with Hadoop
