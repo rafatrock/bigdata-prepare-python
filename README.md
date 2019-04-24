@@ -37,31 +37,39 @@ I am sharing my thoughts on a step by step series of examples that tell you how 
 - [ ] Install CSVKit for handling CSV files
 - [ ] Connect with a Cloud Data Repository to access Datasets
 
-Say what the step will be
+The first step is to use a Cloud Infrastructure to compute and transform your data. There can be different options. One free option can be using Google Colaboratory. This is free and provide you a good Cloud Environment to run your scripts in Python bu using Jupyter Notebook.
 
-```
-Give the example
-```
+![Google Colaboratory](https://cdn-images-1.medium.com/max/1600/1*9tQN6y8rc3Qwr7V70F1F5g.png)
+
+- [x] Using Google Colaboratory
+- [x] Install Apache Spark with Hadoop
+- [x] Install CSVKit for handling CSV files
+- [ ] Connect with a Cloud Data Repository to access Datasets
+
+The following commands will install Apache Spark 2.3.3, Java 8, Findspark and most importantly CSVKit library that makes it easy for Python to work on the given Big Data.
 
 ```Shell
-#OpenJDK Dependencies for Spark
-apt-get install openjdk-8-jdk-headless -qq > /dev/null 
-
-#Download Apache Spark
-wget -q http://apache.osuosl.org/spark/spark-2.3.3/spark-2.3.3-bin-hadoop2.7.tgz 
-
-#Apache Spark and Hadoop Unzip
-tar xf spark-2.3.3-bin-hadoop2.7.tgz 
-
-#FindSpark Install
-pip install -q findspark 
+$ sudo apt-get install openjdk-8-jdk-headless -qq > /dev/null 
+$ wget -q http://apache.osuosl.org/spark/spark-2.3.3/spark-2.3.3-bin-hadoop2.7.tgz 
+$ tar xf spark-2.3.3-bin-hadoop2.7.tgz 
+$ pip install -q findspark 
+$ pip install -q csvkit
 ```
 
-And repeat
+- [x] Using Google Colaboratory
+- [x] Install Apache Spark with Hadoop
+- [x] Install CSVKit for handling CSV files
+- [x] Connect with a Cloud Data Repository to access Datasets
 
+Then the next task is to connect the gigantic data sources from Cloud Storage. For testing purposes we have taken the repository from [Mega](https://mega.nz).
+
+```Python
+import os
+os.system('git clone git@jeroenmeulenaar/python3-mega.git')
+os.chdir('python3-mega')
+os.system('pip install -r requirements.txt')
 ```
-until finished
-```
+
 
 End with an example of getting some data out of the system or using it for a little demo
 
