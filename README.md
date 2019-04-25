@@ -69,20 +69,16 @@ Then the next task is to connect the gigantic data sources from Cloud Storage. F
 
 ```Python
 import os
-os.system('git clone git@jeroenmeulenaar/python3-mega.git')
+os.system('git clone https://github.com/jeroenmeulenaar/python3-mega.git')
 os.chdir('python3-mega')
 os.system('pip install -r requirements.txt')
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Apache Spark](https://spark.apache.org) - A unified analytics engine for large-scale data processing
+* [Google Colaboratory](https://colab.research.google.com) - Cloud research platform from Google
+* [Python](https://www.python.org) - The most popular programming language for dealing Big Data
 
 ## Contributing
 
