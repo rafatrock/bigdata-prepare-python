@@ -96,7 +96,7 @@ os.system('git clone https://github.com/jeroenmeulenaar/python3-mega.git')
 os.chdir('python3-mega')
 os.system('pip install -r requirements.txt')
 ```
-Alternativey you can use the repository from [Google Cloud Storage](https://cloud.google.com).
+Alternatively you can use the repository from [Google Cloud Storage](https://cloud.google.com).
 
 ```Python
 from google.colab import auth
