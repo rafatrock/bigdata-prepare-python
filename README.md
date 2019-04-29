@@ -12,21 +12,31 @@ This is a step by step guide with necessary codes and configurations for Data Sc
 
 Generally in our local system we can deal with small amount of data for machine learning. It is efficient and good for small to medium scale of data volume. You can use your local system for even Kaggle like contests. But to deal with enormous amount of data we need a robust strategy. 
 
-```PowerShell
-systeminfo | findstr /C:"Total Physical Memory"
-systeminfo | findstr /C:"Processor(s)"
-```
+The worst part is that you even can't load the data on Microsoft Excel (at most `1,048,576 rows`) or any editor due to their resource constraints. So we need a different strategy and different environment to deal with Big Data.
 
-Even you can't load the data on Microsoft Excel (at most `1,048,576 rows`) or any editor 
-
-Before anyone starts the war with Big Data I beleive these platform(s) and tool(s) are required to be installed and configured properly
+Before anyone starts the war with Big Data, I beleive these platform(s) and tool(s) are required to be installed and configured properly
 
 ```
 Python >= 3.x
 Apache Spark >= 2.x
-CSVKit >= 1.X
+DASK >= 1.x
 A Cloud Infrastructure (e.g. Google Cloud Platform)
 ```
+### Data Access Strategy
+
+### Difference between ETL and ELT
+
+| Parameters | ETL | ELT |
+| ---------- | ---- | --- |
+| Process |	Data is transformed at staging server. Then transferred to Datawarehouse DB | Data remains in the DB of the Datawarehouse|
+| Usage	| For small amount of data | For high amounts of data |
+| Transformation	| Done in ETL server/staging area |	Transformations are performed in the target system |
+| Time-Load |	Time intensive | Faster |
+| Time-Transformation	| Needs to wait for transformation to complete. As data size grows, transformation time increases |	Speed is never dependant on the size of the data |
+| Time- Maintenance	| Highs maintenance | Low maintenance |
+| Implementation Complexity	| Easier to implement |	Should have deep knowledge of tools and expert skills |
+| Support for Data Warehouse |	On-premises, relational and structured data |	Scalable cloud infrastructure which supports structured, unstructured data sources |
+
 
 ### Installing
 
