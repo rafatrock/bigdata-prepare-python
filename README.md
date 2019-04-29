@@ -24,6 +24,13 @@ A Cloud Infrastructure (e.g. Google Cloud Platform)
 ```
 ### Data Access Strategy
 
+For the last couple of decades `ETL (Extract, Transform, Load)` has been the traditional approach for data warehousing and analytics. The `ELT (Extract, Load, Transform)` approach changes the old paradigm. But, to us it just "T" and "L" are switched.
+![ELTvsETL](https://software-advice.imgix.net/wordpress/other_pages/BI/303737_0003.png)
+
+`ETL` requires management of the raw data, including the extraction of the required information and running the right transformations to ultimately serve the business needs. Each stage - extraction, transformation and loading - requires interaction by data engineers and developers, and dealing with capacity limitations of traditional data warehouses. Using `ETL`, analysts and other BI users have become accustomed to waiting, since simple access to the information is not available until the whole ETL process has been completed.
+
+In the `ELT` approach, after you've extracted your data, you immediately start the loading phase - moving all the data sources into a single, centralized data repository. With today's infrastructure technologies using the cloud, systems can now support large storage and scalable compute. Therefore, a large, expanding data pool and fast processing is virtually endless for maintaining all the extracted raw data.
+
 ### Difference between ETL and ELT
 
 | Parameters | ETL | ELT |
@@ -36,7 +43,15 @@ A Cloud Infrastructure (e.g. Google Cloud Platform)
 | Time- Maintenance	| Highs maintenance | Low maintenance |
 | Implementation Complexity	| Easier to implement |	Should have deep knowledge of tools and expert skills |
 | Support for Data Warehouse |	On-premises, relational and structured data |	Scalable cloud infrastructure which supports structured, unstructured data sources |
+| Complexity	| Loads only the important data, as identified at design time |	Involves development from the output-backward and loading only relevant data |
+| Cost	| High costs for small and medium businesses | Low entry costs using online Software as a Service Platforms |
+| Aggregations	| Complexity increase with the additional amount of data in the dataset |	Power of the target platform can process significant amount of data quickly |
+| Maturity	| The process is used for over two decades. Well documented and best practices easily available |	Relatively new concept and complex to implement |
+| Hardware	| Most tools have unique hardware requirements that are expensive |	Being SAAS hardware cost is not an issue |
 
+### The Timely Approach
+
+When we have to deal with Big Data, the best possible option to go with the `ELT` approach considering the benefits of this approach.
 
 ### Installing
 
@@ -44,7 +59,6 @@ I am sharing my thoughts on a step by step series of examples that tell you how 
 
 - [x] Using Google Colaboratory
 - [ ] Install Apache Spark with Hadoop
-- [ ] Install CSVKit for handling CSV files
 - [ ] Connect with a Cloud Data Repository to access Datasets
 
 The first step is to use a Cloud Infrastructure to compute and transform your data. There can be different options. One free option can be using Google Colaboratory. This is free and provide you a good Cloud Environment to run your scripts in Python bu using Jupyter Notebook.
@@ -55,7 +69,6 @@ The first step is to use a Cloud Infrastructure to compute and transform your da
 
 - [x] Using Google Colaboratory
 - [x] Install Apache Spark with Hadoop
-- [x] Install CSVKit for handling CSV files
 - [ ] Connect with a Cloud Data Repository to access Datasets
 
 The following commands will install Apache Spark 2.3.3, Java 8, Findspark and most importantly CSVKit library that makes it easy for Python to work on the given Big Data.
@@ -72,7 +85,6 @@ $ pip install -q csvkit
 
 - [x] Using Google Colaboratory
 - [x] Install Apache Spark with Hadoop
-- [x] Install CSVKit for handling CSV files
 - [x] Connect with a Cloud Data Repository to access Datasets
 
 Then the next task is to connect the gigantic data sources from Cloud Storage. For testing purposes we have taken the repository from [Mega](https://mega.nz).
