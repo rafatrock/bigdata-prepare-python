@@ -126,7 +126,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 **Rubaiyat Islam Rafat** - *Initial work* - [rafatrock](https://github.com/rafatrock)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/rafatrock/bigdata-prepare-python/graphs/contributors) who participated in this project.
 
 ## License
 
