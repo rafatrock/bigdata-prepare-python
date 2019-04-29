@@ -61,7 +61,7 @@ I am sharing my thoughts on a step by step series of examples that tell you how 
 - [ ] Install Apache Spark with Hadoop
 - [ ] Connect with a Cloud Data Repository to access Datasets
 
-The first step is to use a Cloud Infrastructure to compute and transform your data. There can be different options. One free option can be using Google Colaboratory. This is free and provide you a good Cloud Environment to run your scripts in Python bu using Jupyter Notebook.
+The first step is to use a Cloud Infrastructure to compute and transform your data. There can be different options. One free option can be using Google Colaboratory. This is free and provide you a good Cloud Environment to run your scripts in Python by using Jupyter Notebook.
 
 ![Google Colaboratory](https://cdn-images-1.medium.com/max/1600/1*9tQN6y8rc3Qwr7V70F1F5g.png)
 
@@ -71,14 +71,13 @@ The first step is to use a Cloud Infrastructure to compute and transform your da
 - [x] Install Apache Spark with Hadoop
 - [ ] Connect with a Cloud Data Repository to access Datasets
 
-The following commands will install Apache Spark 2.3.3, Java 8, Findspark and most importantly CSVKit library that makes it easy for Python to work on the given Big Data.
+The following commands will install Apache Spark 2.3.3, Java 8, Findspark library that makes it easy for Python to work on the given Big Data.
 
 ```Shell
 $ sudo apt-get install openjdk-8-jdk-headless -qq > /dev/null 
 $ wget -q http://apache.osuosl.org/spark/spark-2.3.3/spark-2.3.3-bin-hadoop2.7.tgz 
 $ tar xf spark-2.3.3-bin-hadoop2.7.tgz 
 $ pip install -q findspark 
-$ pip install -q csvkit
 ```
 
 ---
@@ -87,7 +86,7 @@ $ pip install -q csvkit
 - [x] Install Apache Spark with Hadoop
 - [x] Connect with a Cloud Data Repository to access Datasets
 
-Then the next task is to connect the gigantic data sources from Cloud Storage. For testing purposes we have taken the repository from [Mega](https://mega.nz).
+Then the next task is to connect the gigantic data sources from Cloud Storage. For testing purposes you can use the repository from [Mega](https://mega.nz).
 
 ```Python
 import os
@@ -95,6 +94,17 @@ os.system('git clone https://github.com/jeroenmeulenaar/python3-mega.git')
 os.chdir('python3-mega')
 os.system('pip install -r requirements.txt')
 ```
+Alternativey you can use the repository from [Google Cloud Storage](https://cloud.google.com).
+
+```Python
+from google.colab import auth
+auth.authenticate_user()
+```
+
+```Shell
+$ gsutil cp -r gs://<source path> /content/<destination path on Google Colaboratory>
+```
+---
 
 ## Built With
 
