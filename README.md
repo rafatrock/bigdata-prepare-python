@@ -55,13 +55,15 @@ When we have to deal with Big Data, the best possible option to go with the `ELT
 
 ### Installing
 
-I am sharing my thoughts on a step by step series of examples that tell you how to get a development env ready
+I am sharing my thoughts on a step by step series of examples that tell you how to get a development environment ready
+
+---
 
 - [x] Using Google Colaboratory
 - [ ] Install Apache Spark with Hadoop
 - [ ] Connect with a Cloud Data Repository to access Datasets
 
-The first step is to use a Cloud Infrastructure to compute and transform your data. There can be different options. One free option can be using Google Colaboratory. This is free and provide you a good Cloud Environment to run your scripts in Python by using Jupyter Notebook.
+The first step is to use a Cloud Infrastructure to compute and transform your data. There can be different options. One free option can be using [Google Colaboratory](https://colab.research.google.com). This is free and provide you a good Cloud Environment to run your scripts in Python by using Jupyter Notebook.
 
 ![Google Colaboratory](https://cdn-images-1.medium.com/max/1600/1*9tQN6y8rc3Qwr7V70F1F5g.png)
 
